@@ -43,7 +43,7 @@ jobs:
 
       - name: Apply dark mode CSS
         run: |
-          cp theme.css dist/theme.css
+          cp theme.css dist/public/theme.css
 
       - name: Commit and push dist folder
         run: |
