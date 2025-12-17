@@ -5,10 +5,10 @@ on:
     branches:
       - main
   workflow_dispatch:
-  
+
 permissions:
   contents: write
-  
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -40,6 +40,10 @@ jobs:
 
       - name: Build gallery with Thumbsup
         run: npx thumbsup --config config.json
+
+      - name: Apply dark mode CSS
+        run: |
+          cp dark.css dist/theme.css
 
       - name: Commit and push dist folder
         run: |
